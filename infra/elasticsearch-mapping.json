@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "properties": {
+      "name": {"type": "text"},
+      "description": {"type": "text"},
+      "threshold": {"type": "integer"},
+      "benefits": {"type": "nested", "properties": {
+        "category": {"type": "keyword"},
+        "rate": {"type": "float"}
+      }},
+      "embedding": {"type": "dense_vector", "dims": 384, "index": true, "similarity": "cosine"}
+    }
+  }
+}
